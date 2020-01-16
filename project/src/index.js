@@ -5,6 +5,11 @@ import './index.css';
 
 function TestComponent() {
   const [someState, setSomeState] = React.useState('Initial');
+
+  // setTimeout(() => {
+  //   setSomeState('State Changed!');
+  // }, 2000);
+
   return (
     <div className="buttons-container">
       <h1>{someState}</h1>
