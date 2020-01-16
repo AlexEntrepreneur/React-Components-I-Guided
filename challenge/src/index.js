@@ -5,49 +5,19 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 function App() {
-  // Declare a new state variable
-
-  // This is code to change the color on the "picker-choice span to match the color of the button choosen"
-
-  // if (color === "Green") {
-  //   styles.color = "#57e278";
-  // } else if (color === "Pink") {
-  //   styles.color = "#e257c1";
-  // } else if (color === "Blue") {
-  //   styles.color = "#2e6cd3";
-  // } else {
-  //   styles.color = "#E62739";
-  // }
+  // 1- Create a slice of state called `direction` that tracks which direction button is clicked
+  // 2- Set its initial value tp '-'
+  const [direction, setDirection] = React.useState('-');
 
   return (
-    <div className="counter">
-      <p>
-        {/* Using template literal to add space after color 👇 */}
-        {`Color: `}
-        {/* <span className="picker-choice" style={color:}> */}
-        <span className="picker-choice">
-          red
-          {/* 👈This color is hard coded in. Replace it with our state variable */}
-        </span>
-      </p>
-      {/* Add click listeners to each button to update our color on click. */}
-      <div className="button_container">
-        <button className="color_button">
-          <span role="img" aria-label="blue heart">
-            💙
-          </span>
-        </button>
-        <button className="color_button">
-          <span role="img" aria-label="green heart">
-            💚
-          </span>
-        </button>
-        <button className="color_button">
-          <span role="img" aria-label="pink heart">
-            💗
-          </span>
-        </button>
-      </div>
+    <div className="buttons-container">
+      {/* 3- Render your new slice of state in a h1 element */}
+      <h1>{direction}</h1>
+      {/* 4- Update the state with the direction (in words) when each button is clicked */}
+      <button onClick={() => setDirection('Left')}>&#11013;</button>
+      <button onClick={() => setDirection('Up')}>&#11014;</button>
+      <button onClick={() => setDirection('Down')}>&#11015;</button>
+      <button onClick={() => setDirection('Right')}>&#10145;</button>
     </div>
   );
 }
