@@ -1,11 +1,8 @@
-.App {
+html {
   font-family: sans-serif;
-  text-align: center;
-}
-
-.App {
-  font-family: sans-serif;
-  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  font-size: 62.5%;
 }
 
 body {
@@ -19,51 +16,26 @@ body {
   color: white;
 }
 
-.counter {
-  margin: 0 auto;
-  font-family: "Source Sans Pro", sans-serif;
-  background: #263650;
-  color: #fff;
-  padding: 10px;
-  width: 300px;
-  min-height: 350px;
-  border-radius: 4px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
-}
-
-p {
-  font-size: 25px;
-}
-
-.button_container {
-  display: flex;
-  justify-content: space-evenly;
+.buttons-container {
+  text-align: center;
 }
 
 button {
-  background: #be9c38;
+  background: #e16c05;
   color: #fff;
-  margin: 0.2rem;
-  padding: 10px;
-  font-size: 16px;
+  margin: 0 1rem;
+  padding: 10px 30px;
+  font-size: 25px;
   text-transform: uppercase;
-  border: 2px solid #be9c38;
+  border: unset;
   border-radius: 2px;
   transition: all 0.2s ease-in;
+  cursor: pointer;
 }
 
 button:hover {
   background: #fff;
-  color: #282c34;
+  color: #e16c05;
   transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.color_button {
-  font-size: 20px;
-  text-align: center;
-  height: 40px;
 }
