@@ -16,8 +16,12 @@ body {
   color: white;
 }
 
-.buttons-container {
+.buttons-container, .counter-container {
   text-align: center;
+}
+
+.counter-heading {
+  font-size: 8rem;
 }
 
 button {
