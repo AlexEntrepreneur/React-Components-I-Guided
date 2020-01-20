@@ -25,6 +25,22 @@ function TestComponent() {
     );
 }
 
+function App() {
+  const [counter, setCounter] = React.useState(0);
+
+  return (
+    <div className="counter-container">
+      <h1 className="counter-heading">{counter}</h1>
+      <div className="buttons-container">
+        <button onClick={() => setCounter(counter + 1)}>Add 1</button>
+        <button onClick={() => setCounter(counter * 5)}>Multiply By 5</button>
+        <button onClick={() => setCounter(counter * 10)}>Multiply By 10</button>
+        <button onClick={() => setCounter(0)}>Reset</button>
+      </div>
+    </div>
+  );
+}
+
 // Amin
 function Hello() {
   const [line1, setLine1] = React.useState('Hello, Can you hear me?');
@@ -59,4 +75,4 @@ function Student() {
 
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<TestComponent />, rootElement);
+ReactDOM.render(<App />, rootElement);
