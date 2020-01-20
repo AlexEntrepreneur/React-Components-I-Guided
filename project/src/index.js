@@ -4,15 +4,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 function TestComponent() {
-  const [someState, setSomeState] = React.useState('Initial');
+  const [someState, setSomeState] = React.useState('Initial!');
 
-  setTimeout(() => {
-    setSomeState('State has changed!');
-  }, 2000);
+  // setTimeout(() => {
+  //   setSomeState('State has changed!');
+  // }, 2000);
 
   return (
-  <div className="box">{someState}</div>
+  <div className="buttons-container">
+    <h1>{someState}</h1>
+    <button onClick={(event) => console.log('Clicked!', event)}>Click Me!</button>
+  </div>
     );
+}
+
+// Amin
+function Hello() {
+  const [line1, setLine1] = React.useState('Hello, Can you hear me?');
+  
+  setTimeout(() => {
+      setLine1('Hello, from the othersiiiide!');
+  }, 2000);
+  
+  return (
+  <div className="box">{line1}</div>
+  );
 }
 
 // Dimos
