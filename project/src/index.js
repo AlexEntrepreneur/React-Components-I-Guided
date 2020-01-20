@@ -14,7 +14,14 @@ function TestComponent() {
   <div className="buttons-container">
     <h1>{someState}</h1>
     <button onClick={(event) => console.log('Clicked!', event)}>Click Me!</button>
+    <button onClick={() => setSomeState('Clicked!')}>Update State!</button>
   </div>
+
+  // Zakaria
+  // <div className="buttons-container">
+  //   <h1>{someState}</h1>
+  //   <button onWheel={(event) => console.log(`wheelin'`)}>X</button>
+  // </div>
     );
 }
 
